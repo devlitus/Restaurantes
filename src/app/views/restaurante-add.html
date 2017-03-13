@@ -1,0 +1,43 @@
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+<h1>{{titulo}}</h1>
+<form class="col s12" #formRestaurante="ngForm" (ngSubmit)="onSubmit()">
+    <div class="input-field">
+        <span *ngIf="!nombre.valid">Campo obligatorio</span>
+        <input type="text" #nombre="ngModel"  name="nombre" [(ngModel)]="restaurante.nombre" required>
+        <label  class="active">Nombre:</label>
+
+    </div>
+    <div class="input-field">
+        <span *ngIf="!direccion.valid">Campo obligatorio</span>
+        <input  type="text" #direccion="ngModel" name="direccion" [(ngModel)]="restaurante.direccion" required>
+        <label class="active">Dirección:</label>
+
+    </div>
+    <div class="input-field col s12">
+        <select (change)="callPrecio(precio.value)" class="browser-default"  #precio name="selector">
+            <!--attr.selected es un selctor de atributo-->
+            <option value="bajo" [attr.selected]="restaurante.precio === 'bajo' ? 'selected' : null">Bajo</option>
+            <option value="medio" [attr.selected]="restaurante.precio === 'medio' ? 'selected' : null">Medio</option>
+            <option value="alto" [attr.selected]="restaurante.precio === 'alto' ? 'selected' : null">Alto</option>
+        </select>
+        <label class="active">Precio</label>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <textarea class="materialize-textarea" #descripcion="ngModel" name="descripcion" [(ngModel)]="restaurante.descripcion" required></textarea>
+            <span *ngIf="!descripcion.valid">Campo obligatorio</span>
+            <label class="active">Comentario</label>
+        </div>
+    </div>
+    <div class="file-field input-field">
+        <div class="btn">
+            <span>Imagen</span>
+            <input name="filename" (change)="fileChangeEvent($event)" type="file">
+        </div>
+        <div class="file-path-wrapper">
+            <input  class="file-path validate" type="text">
+        </div>
+    </div>
+    <input class="btn waves-effect waves-light" type="submit" value="{{titulo}}" [disabled]="!formRestaurante.form.valid">
+</form>

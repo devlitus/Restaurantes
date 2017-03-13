@@ -1,0 +1,151 @@
+*{@import url('https://fonts.googleapis.com/css?family=Roboto');}
+.clearfix{
+    float: none;
+    clear: both;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: 'Roboto', sans-serif Georgia, Arial;
+}
+#content{
+    width: 80%;
+    min-height: 500px;
+    margin: 20px auto 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ddd;
+}
+header{
+    padding: 15px;
+    background: #1976D2;
+}
+header #logo{
+    width: 50px;
+    display: block;
+    float: left;
+}
+header h1{
+    margin: 0 0 0 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 55px;
+    font-size: 30px;
+    text-transform: uppercase;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: white;
+    float: left;
+}
+.main{
+    padding: 15px;
+}
+.main h1{
+    color: #444;
+}
+#restaurantes-list{
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
+.restaurante-item{
+    list-style: none;
+    width: 100%;
+    border-top: 1px solid #dddddd;
+    height: 100px;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #999999;
+}
+.restaurante-item .imagen{
+    height: 105px;
+    width: 105px;
+    overflow: hidden;
+    background: #cccccc;
+    float: left;
+}
+.restaurante-item .imagen img{
+    height: 105px;
+    width: 105px;
+}
+.restaurante-item .data{
+    float: left;
+    margin-left: 20px;
+}
+.restaurante-item h4{
+    color: #444444;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+.btn{
+    font-size: 13px;
+    border: 1px solid #1976D2;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #ddd;
+    padding: 5px;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #0074D9;
+    cursor: pointer;
+}
+.btn-editar{
+    background: #0A0;
+    border-color: #59a600;
+}
+.btn-eliminar{
+    background: #E23237;
+    border-color: #F54747;
+}
+.loading{
+    width: 50px;
+    height: 50px;
+    list-style: none;
+    text-decoration: none;
+}
+.restaurante-box .precio{
+    color: #FFFFFF;
+    background: green;
+    font-size: 14px;
+    padding: 5px;
+    box-shadow: 2px 2px #016B01;
+    text-align: center;
+    width: 200px;
+}
+.restaurante-box .direccion{
+    color: grey;
+    font-size: 17px;
+}
+#nav{
+    width: 100%;
+    background: #F2F2F2;
+    height: 45px;
+    font-size: 17px;
+    border-bottom: 1px solid #dddddd;
+}
+#nav a{
+    padding: 0px 20px 0px 20px;
+    margin-bottom: 10px;
+    border-right: 1px solid #ffffff;
+    height: 45px;
+    /*line-height: 35px;*/
+    text-decoration: none;
+    transition: all 100ms;
+    color: #444;
+}
+#nav a:hover{
+    background: #1976D2;
+    color: #ffffff;
+    opacity: 0.8;
+}
+.seguro{
+    float: left;
+    position: absolute;
+    background: white;
+    padding: 10px;
+    margin-top: -45px;
+}
+.imagen img{
+    width: 150px;
+    height: 150px;
+}

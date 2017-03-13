@@ -1,0 +1,15 @@
+<header id="header">
+    <a [routerLink]="['/']"><img id="logo" src="assets/images/angular.png" alt="Angular"></a>
+    <h1>{{titulo}}</h1>
+    <div class="clearfix"></div>
+</header>
+<nav id="nav">
+    <a routerLink="">Inicio</a>
+    <a routerLink="crear-restaurante/">Crear restautrante</a>
+    <a routerLink="donde-como-hoy/, 'true' ">?Donde como hoy¿</a>
+</nav>
+<!-- /#anv -->
+<section class="main">
+    <router-outlet></router-outlet>
+    <div class="clearfix"></div>
+</section>

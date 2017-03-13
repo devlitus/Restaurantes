@@ -1,0 +1,15 @@
+<div *ngIf="restaurante" class="restaurante-box">
+    <div class="imagen">
+        <img src="http://localhost/proyectos/slim/uploads/{{restaurante.imagen}}" alt="Imagenes" *ngIf="restaurante.imagen && restaurante.imagen !== 'null'">
+    </div>
+    <h1>Restaurante: {{restaurante.nombre}}</h1>
+    <p class="precio">
+        <span [ngSwitch]="restaurante.precio">
+            <span *ngSwitchCase="'bajo'">Entre 2.50€ y 6€</span>
+            <span *ngSwitchCase="'medio'">Entre 4.50€ y 9€</span>
+            <span *ngSwitchCase="'alto'">Entre 7.50€ y 20€</span>
+        </span>
+    </p>
+    <p class="direccion">{{restaurante.direccion}}</p>
+    <p class="descripcion">{{restaurante.descripcion}}</p>
+</div>
