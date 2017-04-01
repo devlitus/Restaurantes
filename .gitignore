@@ -140,4 +140,9 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
-
+# idea
+.idea
+.idea/Angular_Curso.iml
+.idea/inspectionProfiles/Projects_Default.xml
+.idea/modules.xml
+.idea/vcs.xml
